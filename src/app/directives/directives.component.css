@@ -1,0 +1,12 @@
+.txtDanger{
+color: red;
+}
+.txtSuccess{
+    color: green;
+}
+.special:hover{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: cyan;
+    color: blue;
+    font-weight: 700;
+}

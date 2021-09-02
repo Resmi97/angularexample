@@ -1,0 +1,16 @@
+
+<div class="container">
+<p>databinding works!</p>
+<!--interpolation-->
+<h3>{{myname}}</h3>
+<!--property binding-->
+<img [src]="imgPath" [alt]="imgName"> <br>
+<!--event binding-->
+<button type="button" class="btn btn-primary" (click)="greeting()">click</button>
+<!--two way databinding-->
+<form>
+    <label>Enter your item:</label>
+    <input type="text" name="myItem" [(ngModel)]="item">{{item}}
+</form>
+
+</div>

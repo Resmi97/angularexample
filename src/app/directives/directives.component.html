@@ -1,0 +1,53 @@
+<div>
+<h3 *ngIf="isCond">this is *ngIf</h3>
+<div *ngIf="isCond;then truepart;else falsepart"></div>
+<ng-template #truepart>
+    this is true part
+</ng-template>
+<ng-template #falsepart>
+    this is false part
+</ng-template>
+<hr>
+<ul *ngFor="let flower of flowers">
+    <li>{{flower}}</li>
+</ul>
+<!--
+<div [ngSwitch]="myflower">
+    <div *ngSwitchCase="'Rose'">Your choice is Rose</div>
+    <div *ngSwitchCase="'Lotus'">Your choice is Lotus</div>
+    <div *ngSwitchCase="'Tulips'">Your choice is Tulips</div>
+    <div *ngSwitchCase="'Jasmine'">Your choice is Jasmine</div>
+    <div *ngSwitchCase="'Orchid'">Your choice is Orchid</div>
+    <div *ngSwitchDefault>Invalid choice</div>
+</div>  -->
+<div [ngSwitch]="myflower">
+    <div *ngFor="let flower of flowers">
+        <div *ngSwitchCase="flower">Your choice is <strong>{{flower}}</strong></div>
+    </div>
+    <div *ngSwitchDefault>Invalid choice</div>
+</div>
+<hr>
+<div [ngStyle]="myStyle">this is ngStyle</div>
+<div [ngClass]="myClass">this is ngClass</div>
+</div>
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Post</th>
+            <th>Salary</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let e of employee">
+            <td (click)="setParameter(e.id)">{{e.id}}</td>       
+            <td (click)="setParameter(e.name)">{{e.name | mygender:e.gender}}</td>
+            <td (click)="setParameter(e.post)">{{e.post}}</td>
+            <td (click)="setParameter(e.salary)">{{e.salary}}</td>
+            <td (click)="setParameter(e.gender)">{{e.gender}}</td>
+        </tr>
+       
+    </tbody>
+</table>

@@ -1,0 +1,6 @@
+<p>child works!</p>
+<div>Data coming from parent:<strong>{{parentData}}</strong></div>
+<form>
+    <input type="text" name="parent" #data>
+    <button type="button" class="btn btn-primary" (click)="sendData(data.value)">send</button>
+</form>

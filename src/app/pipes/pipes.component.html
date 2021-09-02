@@ -1,0 +1,36 @@
+<p>pipes works!</p>
+
+
+<div>{{msg}}</div>
+<!--string pipes-->
+<div>uppercase:<strong>{{msg | uppercase}}</strong></div>
+<div>lowercase:<strong>{{msg | lowercase}}</strong></div>
+<div>titlecase:<strong>{{msg | titlecase}}</strong></div>
+<hr>
+
+<!--json pipe-->
+<div>json pipes: {{employee | json}}</div>
+<hr>
+
+<!--number pipes-->
+<div><strong>{{3.768 | number: '1.2-3'}}</strong></div>
+<div><strong>{{3.768 | number: '3.5-7'}}</strong></div>
+<div><strong>{{3.768 | number: '3.1-2'}}</strong></div>
+<hr>
+
+<!--currency pipe-->
+<div><strong>{{100 | currency}}</strong></div>
+<div><strong>{{100 | currency:'GBP'}}</strong></div>
+<div><strong>{{100 | currency:'INR'}}</strong></div>
+<hr>
+
+<!--date pipe-->
+<div><strong>{{d}}</strong></div>
+<div>date:<strong>{{d |date}}</strong></div>
+<div>short date:<strong>{{d | date:"shortDate"}}</strong></div>
+<div>long date:<strong>{{d | date:"longDate"}}</strong></div> 
+
+
+
+
+
